@@ -9,7 +9,7 @@ public class ClassAverage {
         int total = 0;
         int gradeCounter = 1;
 
-        while (gradeCounter <= 10) {
+        while (gradeCounter <= 20) {
 
             System.out.print("Enter grade:  ");
             int grade = input.nextInt();
@@ -18,7 +18,7 @@ public class ClassAverage {
 
 
         }
-        int average = total / 10;
+        int average = total / 20;
         System.out.printf("%nTotal of all 10 grade is %d%n", total);
         System.out.printf("Class average is %d%n", average);
 

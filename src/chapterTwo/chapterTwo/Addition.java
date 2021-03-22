@@ -1,4 +1,4 @@
-package chapterTwo;
+package chapterTwo.chapterTwo;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ourTddfiles;
+package Tdd;
 
 public class AirLineReservation {
     private final boolean[] seatingArrangement = new boolean[10];

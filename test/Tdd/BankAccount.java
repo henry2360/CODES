@@ -1,4 +1,4 @@
-package ourTddfiles;
+package Tdd;
 
 public class BankAccount {
 

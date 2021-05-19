@@ -1,2 +1,8 @@
-package chapterFourteen;public class StringIndex {
+package chapterFourteen;
+
+public class StringIndex {
+    public static void main(String[] args) {
+        String txt = "Please locate where 'locate' occurs!";
+        System.out.println(txt.indexOf("locate"));
+    }
 }

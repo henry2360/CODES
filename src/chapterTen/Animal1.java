@@ -1,12 +1,12 @@
 //package chapterTen;
 //
-//    class Animal {
+//    class Animal1 {
 //        public void animalSound() {
 //            System.out.println("The animal makes a sound");
 //        }
 //    }
 //
-//    class Pig extends Animal {
+//    class cat extends Animal {
 //        public void animalSound() {
 //            System.out.println("The cat says: meow meow");
 //        }

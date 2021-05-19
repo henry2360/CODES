@@ -1,6 +1,6 @@
 package chapterSix;
 
-            package ChapterSix;
+
 
 import java.security.SecureRandom;
 
@@ -38,4 +38,4 @@ import java.security.SecureRandom;
             System.out.println(flip());
         }
     }
-}
+

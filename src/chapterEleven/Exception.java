@@ -1,6 +1,6 @@
 package chapterEleven;
 
-public class Main {
+public class Exception extends Throwable {
   static void checkAge(int age){
       if (age < 21){
           throw new ArithmeticException("Acess denied - you must be at least 18 years old.");
@@ -10,7 +10,7 @@ public class Main {
       }
   }
   public static void main(String[] args){
-      checkAge(16);
-
+      checkAge(22);
+//       checkAge(15);
   }
 }

@@ -1,4 +1,4 @@
-package chapterTwo.chapterTwo;
+package chapterTwo.java;
 
 public class TextPrinting2 {
     public static void main(String[] args) {

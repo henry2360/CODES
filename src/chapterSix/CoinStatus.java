@@ -1,6 +1,6 @@
 package chapterSix;
 
-public enum CoinTossing {
+public enum CoinStatus {
 
 
         HEAD,

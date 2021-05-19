@@ -1,7 +1,7 @@
 package chapterEleven;
 import java.util.Scanner;
 
-public class DivideByZeroNoExceptionHandling {
+public class DivisionExceptionHandling {
     public static int quotient(int numerator, int denominator){
    return numerator / denominator;
     }

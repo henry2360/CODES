@@ -1,4 +1,4 @@
-package chapterTwo.chapterTwo;
+package chapterTwo.java;
 
 public class WelcomeToJava4 {
 

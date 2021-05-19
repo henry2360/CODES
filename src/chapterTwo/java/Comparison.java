@@ -1,4 +1,4 @@
-package chapterTwo.chapterTwo;
+package chapterTwo.java;
 import java.util.Scanner;
 public class Comparison {
 

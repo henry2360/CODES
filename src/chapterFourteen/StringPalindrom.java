@@ -1,5 +1,6 @@
 package chapterFourteen;
 
+
 public class StringPalindrom {
     public boolean isPalindrome(String word){
         StringBuilder reversed=new StringBuilder();
@@ -7,4 +8,11 @@ public class StringPalindrom {
             reversed.append(word.charAt((i)));
 
         }
-        return reversed.toString()
+        return reversed.toString().equalsIgnoreCase(word);
+    }
+
+    public static void main(String[] args) {
+        StringPalindrom sc=new StringPalindrom();
+        System.out.println(sc.isPalindrome("mom"));
+    }
+}

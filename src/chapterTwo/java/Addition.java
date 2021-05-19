@@ -1,5 +1,4 @@
-package chapterTwo.chapterTwo;
-import java.sql.SQLOutput;
+package chapterTwo.java;
 import java.util.Scanner;
 
 public class Addition {

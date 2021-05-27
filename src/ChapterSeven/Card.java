@@ -1,17 +1,33 @@
 package ChapterSeven;
 
 public class Card {
-    private final String face;
-    private final String suit;
+        private final Faces face;
+        private final Suits suit;
 
-    public Card(String cardFace, String cardSuit) {
-        this.face = cardFace;
-        this.suit = cardSuit;
+        public Card(Faces cardFace, Suits cardSuit) {
+            face = cardFace;
+            suit = cardSuit;
+        }
+
+        public Faces getFace() {
+            return face;
+        }
+
+        public Suits getSuit() {
+            return suit;
+        }
+
+        @Override
+        public String toString() {
+            return face + " of " + suit;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (o == null || getClass() != o.getClass()) return false;
+            Card card = (Card) o;
+            return face == card.face || suit == card.suit;
+        }
+
     }
 
-    public String toString() {
-
-        return face + "of " + suit;
-    }
-
-}

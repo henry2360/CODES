@@ -1,44 +1,65 @@
 package ChapterSeven;
 
-import java.security.SecureRandom;
+import java.util.Random;
 
-public class DeckOfCards {
-    private final Card[]deck;
-    private int currentCard;
-    private static final int NUMBER_OF_CARDS =52;
+    public class DeckOfCards {
+        private final Card[] cards;
+        private int lastPushedCardIndex = -1;
 
-    private static final SecureRandom randomNumbers = new SecureRandom();
+        public DeckOfCards(int sizeOfDeck) {
+            cards = new Card[sizeOfDeck];
+        }
 
-    public DeckOfCards() {
-        String[] faces = {"Ace", "Deuces", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
-        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
-        deck = new Card[NUMBER_OF_CARDS];
-        currentCard = 0;
+        public int getSize() {
+            return cards.length;
+        }
 
-        for (int count = 0; count < deck.length; count++)
-            deck[count] =
-                    new Card(faces[count % 13], suits[count / 13]);
-    }
-    public void shuffle() {
-        currentCard = 0;
-        int first = 0;
-        for (int count = -0; count < deck.length; first++) {
-            int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
-            Card temp = deck[first];
-            deck[first] = deck[second];
-            deck[second] = temp;
+        public void push(Card card) {
+            if(isFull()) throw new StackOverflowException("Card deck is full");
+            cards[++lastPushedCardIndex] = card;
+        }
+
+        public int getNumberOfCardsInDeck() {
+            return lastPushedCardIndex + 1;
+        }
+
+        public Card peek() {
+            if(isEmpty()) throw new StackUnderflowException("Card deck is empty");
+            return cards[lastPushedCardIndex];
+        }
+
+        public Card pop() {
+            if(isEmpty()) throw new StackUnderflowException("Card deck is empty");
+            return cards[lastPushedCardIndex--];
+        }
+
+        public boolean isEmpty() {
+            return lastPushedCardIndex == -1;
+        }
+
+        public boolean isFull() {
+            return lastPushedCardIndex == getSize() - 1;
+        }
+
+        public void shuffle() {
+            int secondCardIndex = getSize() - 1;
+            int counter = 0;
+            Random randomizer = new Random();
+
+            while (secondCardIndex > counter) {
+                int firstCardIndex = randomizer.nextInt(getSize());
+                Card tempCard = cards[firstCardIndex];
+                cards[firstCardIndex] = cards[secondCardIndex];
+                cards[secondCardIndex] = tempCard;
+                secondCardIndex--;
+                counter++;
+            }
+        }
+
+        public Card[] getCards() {
+            return cards;
         }
     }
 
-public Card dealCard() {
-    if(currentCard<deck.length)
-        return deck[currentCard++];
-    else
-        return null;
 
 
-
-    }
-
-
-}
